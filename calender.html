@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calender difference</title>
+</head>
+<body>
+<input type="date" id="selecteddate">
+<button onclick='myFunction();'>click</button>
+<p id="diff"></p>
+<script>
+function myFunction(){
+alert("hello");
+var date1=new Date();
+var dt = document.getElementById('selecteddate').value;
+var date2=new Date(dt);
+var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+document.getElementById("diff").innerHTML=diffDays;
+}
+</script>
+</body>
+</html>
