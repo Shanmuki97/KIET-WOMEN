@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<form>
+  <p>Enter an email address:</p>
+  <input id='email'>
+  <button type='submit' id='validate'>Validate!</button>
+</form>
+
+<h2 id='result'></h2>
+</head>
+<body>
+<body onload='document.form1.text1.focus()'>
+
+<script>
+function validateEmail(email) {
+  var re = /^c(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@caravel.ai$/;
+  return re.test(email);
+}
+
+function validate() {
+  var $result = $("#result");
+  var email = $("#email").val();
+  $result.text("");
+
+  if (validateEmail(email)) {
+    $result.text(email + " is valid :)");
+    $result.css("color", "green");
+  } else {
+    $result.text(email + " is not valid :(");
+    $result.css("color", "red");
+  }
+  return false;
+}
+
+$("#validate").bind("click", validate);
+</script>
+</body>
+</html>
