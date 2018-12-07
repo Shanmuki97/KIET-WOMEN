@@ -4,3 +4,4 @@ Map is a collection of elements where each element is stored as a Key, value pai
 arr.forEach() function calls the provided function once for each element of the array. The provided function may perform any kind of operation on the elements of the given array. 
 A toggle switch is a switch that has just two positions. For example, light switches that turn a light on or off are toggle switches.
 An array is a special variable, which can hold more than one value at a time.
+API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you’re using an API.
