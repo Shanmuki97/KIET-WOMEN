@@ -1,0 +1,73 @@
+<html>
+<head>
+  <style>
+  body{
+    margin: 0;
+    padding: 0;
+    transition:0.5s;
+  }
+  body.night
+  {
+    background: #00151f;
+    color: #fff;
+  }
+.toggle
+  {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 20px;
+    border: 1px solid #00151f;
+    cursor: pointer;
+    border-radius: 20px;
+    transition:0.5s;
+
+  }
+  
+  .toggle:before
+  {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: #00151f;
+    border-radius: 50%;
+    transition:0.5s;
+  }
+  .toggle.active
+  {
+    background: #00151f;
+    border: 2px solid #fff;
+  }
+    
+    .toggle .active:before
+  {
+    
+    
+    left: 27px;
+    background: #fff;
+    
+  }
+  </style>
+</head>
+<body>
+<div class="toggle"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  $('.toggle').click(function(){
+    $('.toggle').toggleClass('active')
+    $('body').toggleClass('night')
+  })
+})
+</script>
+
+</body>
+</html>
+c

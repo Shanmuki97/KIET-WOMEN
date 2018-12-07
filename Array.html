@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+padding-top:50px
+}
+</style>
+</head>
+<body>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add"
+onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Remove"
+onclick="remove_element_to_array();"></input>
+<script languag="javascript">
+var x = 0;
+var array = Array();
+var inputVal = document.getElementById("txtWords");
+
+function add_element_to_array()
+{
+ array[x] = document.getElementById("text1").value;
+ alert("Element: " + array[x] + " Added at index " + x);
+ x++;
+ document.getElementById("text1").value = "";
+}
+
+function remove_element_to_array()
+{
+  tags = inputVal.value.split(' ');
+  tags.pop();
+  console.log(tags);
+   alert("Element: " + array[x] + " removed at index " + x);
+}
+</script>
+</body>
+</html>
+
